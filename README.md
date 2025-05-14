@@ -6,11 +6,11 @@ This repository provides a detailed conceptual understanding of the **Global Obj
 
 ## 📌 Table of Contents
 
-1. [What is the Global Object?](#1-what-is-the-global-object)
-2. [Understanding the `this` Keyword](#2-understanding-the-this-keyword)
-3. [`this` in Different Contexts](#3-this-in-different-contexts)
-4. [Arrow Functions and `this`](#4-arrow-functions-and-this)
-5. [Summary](#5-summary)
+1. What is the Global Object?
+2. Understanding the `this` Keyword
+3. `this` in Different Contexts
+4. Arrow Functions and `this`
+5. Summary
 
 ---
 
@@ -53,17 +53,9 @@ It does **not** always refer to the same thing — it can represent different va
 
 - When a function is called as a method of an object, `this` refers to the **object itself**.
 
-### 📞 Using `call`, `apply`, or `bind`
-
-- You can explicitly set the value of `this` using `.call()`, `.apply()`, or `.bind()`.
-
 ### 🧪 Inside a Constructor Function
 
 - When using the `new` keyword, `this` refers to the **newly created object**.
-
-### 🖱️ Inside Event Handlers (DOM)
-
-- `this` refers to the **DOM element** that received the event.
 
 ---
 
@@ -85,8 +77,6 @@ This makes arrow functions useful for preserving the outer `this` context — fo
 | Regular function (strict) | `undefined`                                      |
 | Object method             | The object that owns the method                  |
 | Constructor function      | The newly created instance                       |
-| `call` / `apply` / `bind` | Explicitly defined object                        |
-| DOM Event Handler         | The DOM element that triggered the event         |
 | Arrow function            | Inherits `this` from surrounding lexical scope   |
 
 ---
